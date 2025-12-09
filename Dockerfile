@@ -22,8 +22,8 @@ COPY . .
 
 # Expose ports
 # 5173 for Vite dev server (client)
-# 3000 or your server port (adjust as needed)
-EXPOSE 5173 3000
+# 8000 for server port
+EXPOSE 5173 8000
 
 # Install concurrently to run both services
 RUN npm install -g concurrently
