@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "5173:5173" # Client port (Vite)
+      - "3000:3000" # Server port
+    volumes:
+      - ./client:/app/client
+      - ./server:/app/server
+      - /app/client/node_modules
+      - /app/server/node_modules
+    environment:
+      - NODE_ENV=development
+    stdin_open: true
+    tty: true
