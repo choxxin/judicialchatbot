@@ -9,13 +9,17 @@ app.use(cors(
         origin: [process.env.FRONTEND_URL],
         methods: ["GET", "POST"],
         allowedHeaders: ["Content-Type", "Authorization"],
-        credentials: true
+        credentials: true,
+        secure: false
     }
 ))
 
 //cookie parser
 const cookiesParser=require('cookie-parser')
-app.use(cookiesParser())
+app.use(cookiesParser({
+    secure: false,
+    sameSite: 'lax'
+}))
 
 
 //enables parsing json response
