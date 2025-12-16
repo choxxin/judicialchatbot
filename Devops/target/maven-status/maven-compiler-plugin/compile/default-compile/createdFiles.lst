@@ -1,2 +1,7 @@
-com\example\Devops\controller\ProjectController.class
+com\example\Devops\controller\GeminiController.class
 com\example\Devops\DevopsApplication.class
+com\example\Devops\config\GeminiConfig.class
+com\example\Devops\dto\GeminiRequest.class
+com\example\Devops\service\GeminiService.class
+com\example\Devops\controller\ProjectController.class
+com\example\Devops\dto\GeminiResponse.class
